@@ -62,6 +62,11 @@ class RecentViewController: UIViewController, DefaultCollectionView {
             vc.quote = selectedElement
         }
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        collectionView.collectionViewLayout.invalidateLayout()
+    }
 
 }
 
