@@ -27,5 +27,4 @@ class CustomView: UIView {
             layer.borderColor = borderColor?.cgColor
         }
     }
-    
 }

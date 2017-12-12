@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4711206F1FE08352004B389E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4711206E1FE08352004B389E /* Media.xcassets */; };
+		471120711FE08436004B389E /* LikeAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471120701FE08436004B389E /* LikeAnimations.swift */; };
 		477BE22E1FDF7AC200FE23BF /* ListProxyTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477BE22C1FDF7AC100FE23BF /* ListProxyTypes.swift */; };
 		477BE22F1FDF7AC200FE23BF /* ListProxyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477BE22D1FDF7AC200FE23BF /* ListProxyFactory.swift */; };
 		477BE2311FDF7C5600FE23BF /* QuoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477BE2301FDF7C5600FE23BF /* QuoteCollectionViewCell.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		4711206E1FE08352004B389E /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		471120701FE08436004B389E /* LikeAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAnimations.swift; sourceTree = "<group>"; };
 		477BE22C1FDF7AC100FE23BF /* ListProxyTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListProxyTypes.swift; sourceTree = "<group>"; };
 		477BE22D1FDF7AC200FE23BF /* ListProxyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListProxyFactory.swift; sourceTree = "<group>"; };
 		477BE2301FDF7C5600FE23BF /* QuoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				478FEF901FDF755500DD2D3E /* BaseListViewModel.swift */,
 				478FEF921FDF755600DD2D3E /* Commons.swift */,
 				478FEF911FDF755500DD2D3E /* CustomView.swift */,
+				471120701FE08436004B389E /* LikeAnimations.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				478FEF991FDF767E00DD2D3E /* DefaultCollectionView.swift in Sources */,
 				478FEF701FDF6F3F00DD2D3E /* AppDelegate.swift in Sources */,
 				477BE22F1FDF7AC200FE23BF /* ListProxyFactory.swift in Sources */,
+				471120711FE08436004B389E /* LikeAnimations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

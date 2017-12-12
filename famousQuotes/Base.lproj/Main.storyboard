@@ -145,7 +145,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oKY-10-ocp" userLabel="ToolbarView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="50"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yds-ff-GsZ">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -237,6 +237,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Io2-dZ-vWZ" userLabel="DoubleClickView">
+                                <rect key="frame" x="0.0" y="114" width="375" height="442"/>
+                                <subviews>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="big-like" translatesAutoresizingMaskIntoConstraints="NO" id="xbH-RS-gWx">
+                                        <rect key="frame" x="143" y="211.5" width="89" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xbH-RS-gWx" secondAttribute="height" multiplier="1.11" id="TyM-pd-wEE"/>
+                                            <constraint firstAttribute="height" constant="80" id="Yjm-ua-9af"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8bJ-ks-YCe">
                                 <rect key="frame" x="157" y="556" width="60" height="60"/>
                                 <constraints>
@@ -258,26 +271,35 @@
                             <constraint firstItem="xFp-QG-tKu" firstAttribute="leading" secondItem="0h4-7m-AJx" secondAttribute="leading" constant="20" id="73v-qx-S6u"/>
                             <constraint firstItem="0h4-7m-AJx" firstAttribute="trailing" secondItem="sEw-4d-hvJ" secondAttribute="trailing" constant="20" id="BTn-4B-aL0"/>
                             <constraint firstItem="sEw-4d-hvJ" firstAttribute="leading" secondItem="0h4-7m-AJx" secondAttribute="leading" constant="20" id="MYb-ZG-ej6"/>
+                            <constraint firstItem="Io2-dZ-vWZ" firstAttribute="leading" secondItem="0h4-7m-AJx" secondAttribute="leading" id="PLl-ZQ-M2n"/>
                             <constraint firstItem="0h4-7m-AJx" firstAttribute="bottom" secondItem="sEw-4d-hvJ" secondAttribute="bottom" constant="20" id="WkX-nf-zCc"/>
                             <constraint firstItem="LDz-tY-t5d" firstAttribute="top" secondItem="J1E-Ea-t31" secondAttribute="top" id="Wny-pe-Dnv"/>
+                            <constraint firstItem="8bJ-ks-YCe" firstAttribute="top" secondItem="Io2-dZ-vWZ" secondAttribute="bottom" id="cef-az-5sH"/>
                             <constraint firstItem="0h4-7m-AJx" firstAttribute="trailing" secondItem="LDz-tY-t5d" secondAttribute="trailing" id="fWp-c8-eMp"/>
+                            <constraint firstItem="Io2-dZ-vWZ" firstAttribute="top" secondItem="oKY-10-ocp" secondAttribute="bottom" id="gr4-Qo-0eN"/>
                             <constraint firstItem="0h4-7m-AJx" firstAttribute="top" secondItem="oKY-10-ocp" secondAttribute="top" id="kZK-Hd-UYp"/>
                             <constraint firstItem="oKY-10-ocp" firstAttribute="leading" secondItem="0h4-7m-AJx" secondAttribute="leading" id="mXP-fK-gz9"/>
+                            <constraint firstItem="xbH-RS-gWx" firstAttribute="centerX" secondItem="0h4-7m-AJx" secondAttribute="centerX" id="nCz-zT-yH9"/>
                             <constraint firstItem="0h4-7m-AJx" firstAttribute="bottom" secondItem="LDz-tY-t5d" secondAttribute="bottom" id="nHV-UC-G7O"/>
                             <constraint firstItem="8bJ-ks-YCe" firstAttribute="centerX" secondItem="0h4-7m-AJx" secondAttribute="centerX" id="nbb-ST-IXy"/>
+                            <constraint firstItem="xbH-RS-gWx" firstAttribute="centerY" secondItem="0h4-7m-AJx" secondAttribute="centerY" id="s4i-ZV-Pl7"/>
+                            <constraint firstItem="0h4-7m-AJx" firstAttribute="trailing" secondItem="Io2-dZ-vWZ" secondAttribute="trailing" id="uGm-KL-xzF"/>
                             <constraint firstItem="LDz-tY-t5d" firstAttribute="leading" secondItem="0h4-7m-AJx" secondAttribute="leading" id="uRl-LQ-qt4"/>
                             <constraint firstItem="8bJ-ks-YCe" firstAttribute="top" secondItem="xFp-QG-tKu" secondAttribute="bottom" constant="15" id="wqr-su-qK3"/>
                             <constraint firstItem="0h4-7m-AJx" firstAttribute="trailing" secondItem="xFp-QG-tKu" secondAttribute="trailing" constant="20" id="ypZ-Yp-dib"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0h4-7m-AJx"/>
                     </view>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="authorImageView" destination="8bJ-ks-YCe" id="Mc4-Gn-KRN"/>
                         <outlet property="authorLabel" destination="sEw-4d-hvJ" id="x0w-sc-LbD"/>
                         <outlet property="backImageView" destination="LDz-tY-t5d" id="FJc-1J-pDq"/>
+                        <outlet property="bigLikeImageView" destination="xbH-RS-gWx" id="dXQ-W6-Son"/>
+                        <outlet property="doubleClickView" destination="Io2-dZ-vWZ" id="qPx-E9-LWD"/>
+                        <outlet property="likeCountLabel" destination="fJC-iH-f6t" id="anj-w1-cJO"/>
+                        <outlet property="likeImageView" destination="zYy-WI-aRR" id="IYW-c9-uYU"/>
                         <outlet property="quoteLabel" destination="xFp-QG-tKu" id="HpK-Tt-pXt"/>
+                        <outlet property="starImageView" destination="4s5-sZ-4dH" id="wI6-bM-qkQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nwK-7L-A64" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -336,6 +358,7 @@
     </scenes>
     <resources>
         <image name="back" width="32" height="32"/>
+        <image name="big-like" width="256" height="256"/>
         <image name="gradient" width="200" height="200"/>
         <image name="like" width="16" height="16"/>
         <image name="star-white" width="32" height="32"/>

@@ -15,6 +15,11 @@ class QuoteDetailViewController: UIViewController {
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var authorImageView: UIImageView!
     @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var bigLikeImageView: UIImageView!
+    @IBOutlet weak var starImageView: UIImageView!
+    @IBOutlet weak var likeImageView: UIImageView!
+    @IBOutlet weak var likeCountLabel: UILabel!
+    @IBOutlet weak var doubleClickView: UIView!
     
     var quote: Quote?
     
@@ -23,7 +28,6 @@ class QuoteDetailViewController: UIViewController {
         if let imageUrl = quote?.backgroundImg, let url = URL(string: imageUrl) {
             backImageView.kf.setImage(with: url)
         }
-        self.navigationController?.navigationBar.isHidden = true
         
         authorImageView.layer.cornerRadius = 30
         authorImageView.clipsToBounds = true
@@ -36,6 +40,28 @@ class QuoteDetailViewController: UIViewController {
         quoteLabel.text = quote?.text!
         authorLabel.text = quote?.authorName!
         
+        configDoubleTapGestureRecognizer()
+        configNavigationBar()
+    }
+    
+    func configNavigationBar() {
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.tintColor = UIColor.white
+    }
+    
+    func configDoubleTapGestureRecognizer() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(doubleTapped))
+        tap.numberOfTapsRequired = 2
+        doubleClickView.addGestureRecognizer(tap)
+    }
+    
+    @objc func doubleTapped() {
+        let bigLikeAnimation = BigLikeAnimation(view: bigLikeImageView)
+        let smallLikeAnimation = LikeAnimation(view: likeImageView)
+        bigLikeAnimation.startAnimation()
+        smallLikeAnimation.startAnimation()
     }
     
     @IBAction func backPressed(_ sender: Any) {
