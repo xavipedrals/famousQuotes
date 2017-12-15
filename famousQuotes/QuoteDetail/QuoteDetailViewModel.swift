@@ -9,12 +9,25 @@
 import RxSwift
 
 class QuoteDetailViewModel {
-    var userHasLiked = false
-    var likeCount: Int
+    var userHasLiked: Bool {
+        set {
+            if userHasLiked != newValue {
+                if newValue { likeCount.value += 1}
+                else { likeCount.value -= 1 }
+                self.aux = newValue
+            }
+        }
+        get {
+            return self.aux
+        }
+    }
+    private var aux = false
+    var isFavourite = false
+    private let userHasLikedObs = Variable<Int>(0)
+    var likeCount = Variable<Int>(0)
+    let disposeBag = DisposeBag()
     
     init(quote: Quote) {
-        self.likeCount = quote.likeCount!
+        self.likeCount.value = quote.likeCount!
     }
-    
-    
 }

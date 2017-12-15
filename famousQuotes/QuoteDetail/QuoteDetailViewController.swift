@@ -8,6 +8,8 @@
 
 import UIKit
 import Kingfisher
+import RxSwift
+import RxCocoa
 
 class QuoteDetailViewController: UIViewController {
 
@@ -25,9 +27,12 @@ class QuoteDetailViewController: UIViewController {
     @IBOutlet weak var starButton: UIButton!
     
     var quote: Quote?
+    var viewModel: QuoteDetailViewModel?
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = QuoteDetailViewModel(quote: quote!)
         initVisuals()
         
         configDoubleTapGestureRecognizer()
@@ -36,9 +41,6 @@ class QuoteDetailViewController: UIViewController {
     }
     
     func initVisuals() {
-//        if let imageUrl = quote?.backgroundImg, let url = URL(string: imageUrl) {
-//            backImageView.kf.setImage(with: url)
-//        }
         backImageView.setImage(url: quote?.backgroundImg)
         
         setBarButtonSize(button: likeButton)
@@ -48,13 +50,14 @@ class QuoteDetailViewController: UIViewController {
         authorImageView.clipsToBounds = true
         authorImageView.layer.borderWidth = 1
         authorImageView.layer.borderColor = UIColor.white.cgColor
-//        if let authorImage = quote?.authorPhoto, let url = URL(string: authorImage) {
-//            authorImageView.kf.setImage(with: url)
-//        }
         authorImageView.setImage(url: quote?.authorPhoto)
         
         quoteLabel.text = quote?.text!
         authorLabel.text = quote?.authorName!
+        viewModel?.likeCount.asObservable()
+            .map({ return "\($0)" })
+            .bind(to: likeCountLabel.rx.text)
+            .disposed(by: disposeBag)
     }
     
     func setBarButtonSize(button: UIButton) {
@@ -82,22 +85,35 @@ class QuoteDetailViewController: UIViewController {
     
     @objc func doubleTapped() {
         let bigLikeAnimation = BigLikeAnimation(view: bigLikeImageView)
-        let smallLikeAnimation = LikeAnimation(view: likeImageView)
+        likePressed("DoubleTap")
         bigLikeAnimation.startAnimation()
-        smallLikeAnimation.startAnimation()
     }
     
     @IBAction func likePressed(_ sender: Any) {
-        likeImageView.image = UIImage(named: "like-red")
-    }
-    
-    @IBAction func starPressed(_ sender: Any) {
-        let smallLikeAnimation = LikeAnimation(view: starImageView)
+        if let sender = sender as? String {
+            if sender == "DoubleTap" {
+                likeImageView.image = UIImage(named: "like-red")
+                viewModel?.userHasLiked = true
+            }
+        }
+        else {
+            likeImageView.image = viewModel!.userHasLiked
+                ? UIImage(named: "like")
+                : UIImage(named: "like-red")
+            viewModel?.userHasLiked = !viewModel!.userHasLiked
+        }
+        let smallLikeAnimation = LikeAnimation(view: likeImageView)
         smallLikeAnimation.startAnimation()
     }
     
-    @IBAction func backPressed(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+    @IBAction func starPressed(_ sender: Any) {
+        starImageView.image = !viewModel!.isFavourite
+            ? UIImage(named: "star")
+            : UIImage(named: "star-white")
+        
+        let smallLikeAnimation = LikeAnimation(view: starImageView)
+        smallLikeAnimation.startAnimation()
+        viewModel?.isFavourite = !viewModel!.isFavourite
     }
     
 }
