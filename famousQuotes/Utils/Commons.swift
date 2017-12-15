@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 extension UIRefreshControl {
     convenience init(tint: UIColor, background: UIColor) {
@@ -23,5 +24,13 @@ extension UIScrollView {
     
     func resetScrollPositionToTop() {
         self.contentOffset = CGPoint(x: -contentInset.left, y: -contentInset.top)
+    }
+}
+
+extension UIImageView {
+    func setImage(url: String?) {
+        if let imageUrl = url, let realUrl = URL(string: imageUrl) {
+            self.kf.setImage(with: realUrl)
+        }
     }
 }

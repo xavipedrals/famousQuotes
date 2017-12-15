@@ -17,9 +17,7 @@ class QuoteCollectionViewCell: UICollectionViewCell, ReactiveCell {
     
     func initCell(from: ParseableObj) {
         if let quote = from as? Quote {
-            if let backImage = quote.backgroundImg, let url = URL(string: backImage) {
-                backgImageView.kf.setImage(with: url)
-            }
+            backgImageView.setImage(url: quote.backgroundImg)
             if let author = quote.authorName {
                 authorLabel.text = author.uppercased()
             }

@@ -65,6 +65,7 @@ class RecentViewController: UIViewController, DefaultCollectionView {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
+        print("Haalou")
         collectionView.collectionViewLayout.invalidateLayout()
     }
 
@@ -82,7 +83,7 @@ extension RecentViewController: UICollectionViewDelegateFlowLayout {
         else if screenWidth > 900 { //ipad horizontal
             cellsPerRow = 3
         }
-        return self.getCellSize(viewWidth: collectionView.bounds.width, sideInset: 15, cellsPerRow: cellsPerRow, cellSpacing: 10, heightProportion: 1.2)
+        return self.getCellSize(viewWidth: collectionView.bounds.width, sideInset: 15, cellsPerRow: cellsPerRow, cellSpacing: 15, heightProportion: 1.2)
     }
 }
 

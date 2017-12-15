@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4711206F1FE08352004B389E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4711206E1FE08352004B389E /* Media.xcassets */; };
 		471120711FE08436004B389E /* LikeAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471120701FE08436004B389E /* LikeAnimations.swift */; };
+		4771447D1FE326270024BE9E /* QuoteDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771447C1FE326270024BE9E /* QuoteDetailViewModel.swift */; };
 		477BE22E1FDF7AC200FE23BF /* ListProxyTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477BE22C1FDF7AC100FE23BF /* ListProxyTypes.swift */; };
 		477BE22F1FDF7AC200FE23BF /* ListProxyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477BE22D1FDF7AC200FE23BF /* ListProxyFactory.swift */; };
 		477BE2311FDF7C5600FE23BF /* QuoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477BE2301FDF7C5600FE23BF /* QuoteCollectionViewCell.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		4711206E1FE08352004B389E /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		471120701FE08436004B389E /* LikeAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAnimations.swift; sourceTree = "<group>"; };
+		4771447C1FE326270024BE9E /* QuoteDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetailViewModel.swift; sourceTree = "<group>"; };
 		477BE22C1FDF7AC100FE23BF /* ListProxyTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListProxyTypes.swift; sourceTree = "<group>"; };
 		477BE22D1FDF7AC200FE23BF /* ListProxyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListProxyFactory.swift; sourceTree = "<group>"; };
 		477BE2301FDF7C5600FE23BF /* QuoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -99,6 +101,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4771447A1FE325EC0024BE9E /* Recent */ = {
+			isa = PBXGroup;
+			children = (
+				477BE2301FDF7C5600FE23BF /* QuoteCollectionViewCell.swift */,
+				478FEF711FDF6F3F00DD2D3E /* RecentViewController.swift */,
+				478FEFAA1FDF78AB00DD2D3E /* RecentViewModel.swift */,
+			);
+			path = Recent;
+			sourceTree = "<group>";
+		};
+		4771447B1FE325FB0024BE9E /* QuoteDetail */ = {
+			isa = PBXGroup;
+			children = (
+				477BE2321FDF84A500FE23BF /* QuoteDetailViewController.swift */,
+				4771447C1FE326270024BE9E /* QuoteDetailViewModel.swift */,
+			);
+			path = QuoteDetail;
+			sourceTree = "<group>";
+		};
 		477BE22B1FDF7AA900FE23BF /* ListProxies */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,12 +152,10 @@
 			isa = PBXGroup;
 			children = (
 				478FEF6F1FDF6F3F00DD2D3E /* AppDelegate.swift */,
-				478FEF711FDF6F3F00DD2D3E /* RecentViewController.swift */,
-				477BE2321FDF84A500FE23BF /* QuoteDetailViewController.swift */,
-				478FEFAA1FDF78AB00DD2D3E /* RecentViewModel.swift */,
-				477BE2301FDF7C5600FE23BF /* QuoteCollectionViewCell.swift */,
-				478FEFA81FDF77BF00DD2D3E /* Quote.swift */,
 				478FEF9A1FDF769900DD2D3E /* Utils */,
+				4771447A1FE325EC0024BE9E /* Recent */,
+				4771447B1FE325FB0024BE9E /* QuoteDetail */,
+				478FEFA81FDF77BF00DD2D3E /* Quote.swift */,
 				478FEF731FDF6F3F00DD2D3E /* Main.storyboard */,
 				478FEF761FDF6F3F00DD2D3E /* Assets.xcassets */,
 				4711206E1FE08352004B389E /* Media.xcassets */,
@@ -310,6 +329,7 @@
 			files = (
 				477BE2331FDF84A500FE23BF /* QuoteDetailViewController.swift in Sources */,
 				478FEF951FDF755600DD2D3E /* CustomView.swift in Sources */,
+				4771447D1FE326270024BE9E /* QuoteDetailViewModel.swift in Sources */,
 				478FEF931FDF755600DD2D3E /* AlamofireGetter.swift in Sources */,
 				477BE22E1FDF7AC200FE23BF /* ListProxyTypes.swift in Sources */,
 				477BE2311FDF7C5600FE23BF /* QuoteCollectionViewCell.swift in Sources */,
