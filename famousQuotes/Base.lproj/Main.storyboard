@@ -37,12 +37,12 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ynG-CQ-UmC">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="W3V-1r-emr">
+                                <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="W3V-1r-emr">
                                     <size key="itemSize" width="286" height="342"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="quoteCell" id="8e6-uW-mdY" customClass="QuoteCollectionViewCell" customModule="famousQuotes" customModuleProvider="target">
@@ -52,14 +52,24 @@
                                             <rect key="frame" x="0.0" y="0.0" width="286" height="342"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVM-qy-Hhz" customClass="CustomView" customModule="famousQuotes" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="286" height="342"/>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVM-qy-Hhz" customClass="CardView" customModule="famousQuotes" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="0.0" width="266" height="312"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hcC-ce-62R">
-                                                            <rect key="frame" x="-0.5" y="0.0" width="286" height="342"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hcC-ce-62R" customClass="CustomImageView" customModule="famousQuotes" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="266" height="312"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="15"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="2Ey-dJ-2Wl">
-                                                            <rect key="frame" x="-0.5" y="0.0" width="286" height="342"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="2Ey-dJ-2Wl" customClass="CustomImageView" customModule="famousQuotes" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="266" height="312"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="15"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYw-34-kIo">
                                                             <rect key="frame" x="20" y="20" width="45" height="17"/>
@@ -68,13 +78,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote with a long text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECw-A4-1jL">
-                                                            <rect key="frame" x="19.5" y="40" width="246" height="57.5"/>
+                                                            <rect key="frame" x="19.5" y="40" width="226" height="57.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="ECw-A4-1jL" firstAttribute="leading" secondItem="VVM-qy-Hhz" secondAttribute="leading" constant="20" id="0VX-6B-1s7"/>
                                                         <constraint firstItem="ECw-A4-1jL" firstAttribute="top" secondItem="pYw-34-kIo" secondAttribute="bottom" constant="3" id="1SD-jB-6Dj"/>
@@ -91,19 +101,15 @@
                                                         <constraint firstItem="pYw-34-kIo" firstAttribute="leading" secondItem="VVM-qy-Hhz" secondAttribute="leading" constant="20" id="lVJ-og-RD2"/>
                                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pYw-34-kIo" secondAttribute="trailing" constant="20" id="wua-UY-uTH"/>
                                                     </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="9"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="VVM-qy-Hhz" secondAttribute="trailing" id="Ltn-ly-hnL"/>
+                                            <constraint firstAttribute="trailing" secondItem="VVM-qy-Hhz" secondAttribute="trailing" constant="10" id="Ltn-ly-hnL"/>
                                             <constraint firstItem="VVM-qy-Hhz" firstAttribute="top" secondItem="8e6-uW-mdY" secondAttribute="top" id="hKy-GD-5Ne"/>
-                                            <constraint firstItem="VVM-qy-Hhz" firstAttribute="leading" secondItem="8e6-uW-mdY" secondAttribute="leading" id="hPf-bX-0eR"/>
-                                            <constraint firstAttribute="bottom" secondItem="VVM-qy-Hhz" secondAttribute="bottom" id="jZj-bE-2me"/>
+                                            <constraint firstItem="VVM-qy-Hhz" firstAttribute="leading" secondItem="8e6-uW-mdY" secondAttribute="leading" constant="10" id="hPf-bX-0eR"/>
+                                            <constraint firstAttribute="bottom" secondItem="VVM-qy-Hhz" secondAttribute="bottom" constant="30" id="jZj-bE-2me"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="authorLabel" destination="pYw-34-kIo" id="oqM-GZ-xiM"/>
@@ -126,7 +132,7 @@
                     <navigationItem key="navigationItem" title="Recent" largeTitleDisplayMode="never" id="s9f-Sb-EMc"/>
                     <connections>
                         <outlet property="collectionView" destination="ynG-CQ-UmC" id="kLh-cY-YI4"/>
-                        <segue destination="mVL-bQ-Fxl" kind="show" identifier="goToQuoteDetail" id="9m6-Iw-6JF"/>
+                        <segue destination="mVL-bQ-Fxl" kind="show" identifier="goToQuoteDetail" action="showDetailViewController:sender:" id="9m6-Iw-6JF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOm-cz-CSa" userLabel="First Responder" sceneMemberID="firstResponder"/>

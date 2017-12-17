@@ -74,7 +74,6 @@ class QuoteDetailViewController: UIViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.tintColor = UIColor.white
-        
     }
     
     func configDoubleTapGestureRecognizer() {

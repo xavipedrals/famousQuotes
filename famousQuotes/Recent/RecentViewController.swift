@@ -24,10 +24,18 @@ class RecentViewController: UIViewController, DefaultCollectionView {
         collectionViewProxy = ListProxyFactory.factory(for: collectionView, viewModel: RecentViewModel(), cellType: QuoteCollectionViewCell.self)
         setupCollectionView()
         setupNavBar()
+        configNavigationBar()
     }
     
     func setupNavBar() {
         self.navigationItem.largeTitleDisplayMode = .always
+    }
+    
+    func configNavigationBar() {
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.tintColor = UIColor.white
     }
     
     func setupCollectionViewCells() {
@@ -83,7 +91,7 @@ extension RecentViewController: UICollectionViewDelegateFlowLayout {
         else if screenWidth > 900 { //ipad horizontal
             cellsPerRow = 3
         }
-        return self.getCellSize(viewWidth: collectionView.bounds.width, sideInset: 15, cellsPerRow: cellsPerRow, cellSpacing: 15, heightProportion: 1.2)
+        return self.getCellSize(viewWidth: collectionView.bounds.width, sideInset: 10, cellsPerRow: cellsPerRow, cellSpacing: 0, heightProportion: 1.2)
     }
 }
 

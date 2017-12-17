@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		470722351FE4BEF2004F00D4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470722341FE4BEF2004F00D4 /* CardView.swift */; };
 		4711206F1FE08352004B389E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4711206E1FE08352004B389E /* Media.xcassets */; };
 		471120711FE08436004B389E /* LikeAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471120701FE08436004B389E /* LikeAnimations.swift */; };
+		473A28191FE6422C00390E6C /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A28181FE6422C00390E6C /* CustomImageView.swift */; };
 		4771447D1FE326270024BE9E /* QuoteDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771447C1FE326270024BE9E /* QuoteDetailViewModel.swift */; };
 		477BE22E1FDF7AC200FE23BF /* ListProxyTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477BE22C1FDF7AC100FE23BF /* ListProxyTypes.swift */; };
 		477BE22F1FDF7AC200FE23BF /* ListProxyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477BE22D1FDF7AC200FE23BF /* ListProxyFactory.swift */; };
@@ -46,8 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		470722341FE4BEF2004F00D4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4711206E1FE08352004B389E /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		471120701FE08436004B389E /* LikeAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAnimations.swift; sourceTree = "<group>"; };
+		473A28181FE6422C00390E6C /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		4771447C1FE326270024BE9E /* QuoteDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetailViewModel.swift; sourceTree = "<group>"; };
 		477BE22C1FDF7AC100FE23BF /* ListProxyTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListProxyTypes.swift; sourceTree = "<group>"; };
 		477BE22D1FDF7AC200FE23BF /* ListProxyFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListProxyFactory.swift; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 				478FEF901FDF755500DD2D3E /* BaseListViewModel.swift */,
 				478FEF921FDF755600DD2D3E /* Commons.swift */,
 				478FEF911FDF755500DD2D3E /* CustomView.swift */,
+				470722341FE4BEF2004F00D4 /* CardView.swift */,
+				473A28181FE6422C00390E6C /* CustomImageView.swift */,
 				471120701FE08436004B389E /* LikeAnimations.swift */,
 			);
 			path = Utils;
@@ -328,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				477BE2331FDF84A500FE23BF /* QuoteDetailViewController.swift in Sources */,
+				473A28191FE6422C00390E6C /* CustomImageView.swift in Sources */,
 				478FEF951FDF755600DD2D3E /* CustomView.swift in Sources */,
 				4771447D1FE326270024BE9E /* QuoteDetailViewModel.swift in Sources */,
 				478FEF931FDF755600DD2D3E /* AlamofireGetter.swift in Sources */,
@@ -342,6 +349,7 @@
 				478FEF991FDF767E00DD2D3E /* DefaultCollectionView.swift in Sources */,
 				478FEF701FDF6F3F00DD2D3E /* AppDelegate.swift in Sources */,
 				477BE22F1FDF7AC200FE23BF /* ListProxyFactory.swift in Sources */,
+				470722351FE4BEF2004F00D4 /* CardView.swift in Sources */,
 				471120711FE08436004B389E /* LikeAnimations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
