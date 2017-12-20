@@ -33,8 +33,16 @@ extension UIScrollView {
 
 extension UIImageView {
     func setImage(url: String?) {
-        if let imageUrl = url, let realUrl = URL(string: imageUrl) {
-            self.kf.setImage(with: realUrl)
+        if let imageUrl = url {
+            if let realUrl = URL(string: imageUrl) {
+                self.kf.setImage(with: realUrl)
+            }
+            else {
+                print("/(url) seems down or bad formatted")
+            }
+        }
+        else {
+            print("Nil url image")
         }
     }
 }

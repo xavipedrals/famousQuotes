@@ -108,6 +108,7 @@
 		4771447A1FE325EC0024BE9E /* Recent */ = {
 			isa = PBXGroup;
 			children = (
+				478FEFA81FDF77BF00DD2D3E /* Quote.swift */,
 				477BE2301FDF7C5600FE23BF /* QuoteCollectionViewCell.swift */,
 				478FEF711FDF6F3F00DD2D3E /* RecentViewController.swift */,
 				478FEFAA1FDF78AB00DD2D3E /* RecentViewModel.swift */,
@@ -159,7 +160,6 @@
 				478FEF9A1FDF769900DD2D3E /* Utils */,
 				4771447A1FE325EC0024BE9E /* Recent */,
 				4771447B1FE325FB0024BE9E /* QuoteDetail */,
-				478FEFA81FDF77BF00DD2D3E /* Quote.swift */,
 				478FEF731FDF6F3F00DD2D3E /* Main.storyboard */,
 				478FEF761FDF6F3F00DD2D3E /* Assets.xcassets */,
 				4711206E1FE08352004B389E /* Media.xcassets */,
