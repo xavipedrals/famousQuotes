@@ -9,6 +9,10 @@
 import UIKit
 import Kingfisher
 
+class Environment {
+    static let jsonParsingMethod = JSONParsingMethod.soft
+}
+
 extension UIRefreshControl {
     convenience init(tint: UIColor, background: UIColor) {
         self.init()

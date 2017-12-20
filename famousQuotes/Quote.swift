@@ -20,7 +20,7 @@ struct Quote: ParseableObj {
     var backgroundColor: String?
     
     init(from json: JSON) {
-        let parser = SafeJSONParser(className: String(describing: Quote.self), json: json)
+        let parser = JSONParserFactory.factory(className: String(describing: Quote.self), json: json)
         
         self.id = parser.getString(index: "_id")
         self.authorName = parser.getString(index: "author_name")

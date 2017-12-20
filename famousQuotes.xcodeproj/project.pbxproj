@@ -22,7 +22,7 @@
 		478FEF771FDF6F3F00DD2D3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 478FEF761FDF6F3F00DD2D3E /* Assets.xcassets */; };
 		478FEF7A1FDF6F3F00DD2D3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 478FEF781FDF6F3F00DD2D3E /* LaunchScreen.storyboard */; };
 		478FEF851FDF6F4000DD2D3E /* famousQuotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478FEF841FDF6F4000DD2D3E /* famousQuotesTests.swift */; };
-		478FEF931FDF755600DD2D3E /* AlamofireGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478FEF8F1FDF755500DD2D3E /* AlamofireGetter.swift */; };
+		478FEF931FDF755600DD2D3E /* SimpleHttpGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478FEF8F1FDF755500DD2D3E /* SimpleHttpGetter.swift */; };
 		478FEF941FDF755600DD2D3E /* BaseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478FEF901FDF755500DD2D3E /* BaseListViewModel.swift */; };
 		478FEF951FDF755600DD2D3E /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478FEF911FDF755500DD2D3E /* CustomView.swift */; };
 		478FEF961FDF755600DD2D3E /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478FEF921FDF755600DD2D3E /* Commons.swift */; };
@@ -67,7 +67,7 @@
 		478FEF801FDF6F4000DD2D3E /* famousQuotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = famousQuotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		478FEF841FDF6F4000DD2D3E /* famousQuotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = famousQuotesTests.swift; sourceTree = "<group>"; };
 		478FEF861FDF6F4000DD2D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		478FEF8F1FDF755500DD2D3E /* AlamofireGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireGetter.swift; sourceTree = "<group>"; };
+		478FEF8F1FDF755500DD2D3E /* SimpleHttpGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleHttpGetter.swift; sourceTree = "<group>"; };
 		478FEF901FDF755500DD2D3E /* BaseListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseListViewModel.swift; sourceTree = "<group>"; };
 		478FEF911FDF755500DD2D3E /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		478FEF921FDF755600DD2D3E /* Commons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 				477BE22B1FDF7AA900FE23BF /* ListProxies */,
 				478FEF981FDF767E00DD2D3E /* DefaultCollectionView.swift */,
 				478FEFA61FDF773700DD2D3E /* JSONParser.swift */,
-				478FEF8F1FDF755500DD2D3E /* AlamofireGetter.swift */,
+				478FEF8F1FDF755500DD2D3E /* SimpleHttpGetter.swift */,
 				478FEF901FDF755500DD2D3E /* BaseListViewModel.swift */,
 				478FEF921FDF755600DD2D3E /* Commons.swift */,
 				478FEF911FDF755500DD2D3E /* CustomView.swift */,
@@ -337,7 +337,7 @@
 				473A28191FE6422C00390E6C /* CustomImageView.swift in Sources */,
 				478FEF951FDF755600DD2D3E /* CustomView.swift in Sources */,
 				4771447D1FE326270024BE9E /* QuoteDetailViewModel.swift in Sources */,
-				478FEF931FDF755600DD2D3E /* AlamofireGetter.swift in Sources */,
+				478FEF931FDF755600DD2D3E /* SimpleHttpGetter.swift in Sources */,
 				477BE22E1FDF7AC200FE23BF /* ListProxyTypes.swift in Sources */,
 				477BE2311FDF7C5600FE23BF /* QuoteCollectionViewCell.swift in Sources */,
 				478FEFA71FDF773700DD2D3E /* JSONParser.swift in Sources */,

@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Recent-->
         <scene sceneID="s1R-US-myn">
             <objects>
                 <navigationController id="qde-ku-m6s" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="7Rs-I1-M4o"/>
+                    <tabBarItem key="tabBarItem" title="Recent" id="7Rs-I1-M4o"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="JHn-G0-rcR">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -132,7 +132,7 @@
                     <navigationItem key="navigationItem" title="Recent" largeTitleDisplayMode="never" id="s9f-Sb-EMc"/>
                     <connections>
                         <outlet property="collectionView" destination="ynG-CQ-UmC" id="kLh-cY-YI4"/>
-                        <segue destination="mVL-bQ-Fxl" kind="show" identifier="goToQuoteDetail" action="showDetailViewController:sender:" id="9m6-Iw-6JF"/>
+                        <segue destination="mVL-bQ-Fxl" kind="show" identifier="goToQuoteDetail" id="9m6-Iw-6JF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOm-cz-CSa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -326,8 +326,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ksa-lP-3N2" kind="relationship" relationship="viewControllers" id="8aJ-Mk-xd1"/>
                         <segue destination="qde-ku-m6s" kind="relationship" relationship="viewControllers" id="LBf-GP-3QN"/>
+                        <segue destination="ksa-lP-3N2" kind="relationship" relationship="viewControllers" id="8aJ-Mk-xd1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xrJ-yx-u5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>

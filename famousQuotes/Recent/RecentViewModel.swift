@@ -15,10 +15,10 @@ class RecentViewModel: BaseListViewModel {
     var defaultOffset = 10
     var data = Variable<[Quote]>([])
     var isDataRefreshing = false
-    var quotesGetter: AlamofireGetter<Quote>
+    var quotesGetter: SimpleHttpGetter<Quote>
     
     init() {
-        quotesGetter = AlamofireGetter(url: "https://myquotesserver.herokuapp.com/api/quotes/recent", indexs: [])
+        quotesGetter = SimpleHttpGetter(url: "https://myquotesserver.herokuapp.com/api/quotes/recent", indexs: [])
         getData(offset: 0)
     }
     

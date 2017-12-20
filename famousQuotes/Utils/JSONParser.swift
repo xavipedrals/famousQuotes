@@ -13,7 +13,34 @@ protocol ParseableObj {
     init(from: JSON)
 }
 
-class SafeJSONParser {
+protocol JSONParser {
+    var className: String { get }
+    var json: JSON { get }
+    
+    init(className: String, json: JSON)
+    func getString(index: String) -> String
+    func getInt(index: String) -> Int
+    func getDouble(index: String) -> Double
+    func getBoolean(index: String) -> Bool
+}
+
+enum JSONParsingMethod {
+    case hard
+    case soft
+}
+
+class JSONParserFactory {
+    static func factory(className: String, json: JSON) -> JSONParser {
+        switch Environment.jsonParsingMethod {
+        case .hard:
+            return HardJSONParser(className: className, json: json)
+        case .soft:
+            return SoftJSONParser(className: className, json: json)
+        }
+    }
+}
+
+class SoftJSONParser: JSONParser {
     var className: String
     var json: JSON
     
@@ -26,7 +53,7 @@ class SafeJSONParser {
         case notJSON(className: String, index: String)
     }
     
-    init(className: String, json: JSON) {
+    required init(className: String, json: JSON) {
         guard json.array == nil else {
             fatalError("SafeJSON parser is for parsing single objects, not arrays")
         }
@@ -66,3 +93,45 @@ class SafeJSONParser {
         return false
     }
 }
+
+class HardJSONParser: JSONParser {
+    var className: String
+    var json: JSON
+    
+    required init(className: String, json: JSON) {
+        guard json.array == nil else {
+            fatalError("HardJSON parser is for parsing single objects, not arrays")
+        }
+        self.className = className
+        self.json = json
+    }
+    
+    func getString(index: String) -> String {
+        if let string = json[index].string {
+            return string
+        }
+        fatalError("\(className)->\(index) is not a String")
+    }
+    
+    func getInt(index: String) -> Int {
+        if let integer = json[index].int {
+            return integer
+        }
+        fatalError("\(className)->\(index) is not an Int")
+    }
+    
+    func getDouble(index: String) -> Double {
+        if let integer = json[index].double {
+            return integer
+        }
+        fatalError("\(className)->\(index) is not a Double")
+    }
+    
+    func getBoolean(index: String) -> Bool {
+        if let integer = json[index].bool {
+            return integer
+        }
+        fatalError("\(className)->\(index) is not a Boolean")
+    }
+}
+

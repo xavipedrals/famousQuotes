@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class AlamofireGetter<T: ParseableObj> {
+class SimpleHttpGetter<T: ParseableObj> {
     
     var url: String
     var indexs: [Any]
